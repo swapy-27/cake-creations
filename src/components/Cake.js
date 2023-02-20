@@ -15,7 +15,7 @@ export default function Cake(props) {
       }}
     >
       <div className="cake_image_container">
-        <img src={props.image} alt="cake" />
+        <img className="cake_image" src={props.image} alt="cake" />
       </div>
       <p
         style={{

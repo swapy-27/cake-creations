@@ -4,6 +4,7 @@ import NavBar from "../components/NavBar";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Cake from "../components/Cake";
 import cakeImage from "../assets/best-moist-chocolate-cake-1.jpg";
+import BestSeller from "../components/BestSeller";
 export default function Home() {
   const menu_carousel = [
     {
@@ -23,13 +24,27 @@ export default function Home() {
       name: "Choclate-Cake",
     },
   ];
+  const bestsellers_carousel = [
+    {
+      image: cakeImage,
+      name: "Choclate-Cake",
+    },
+    {
+      image: cakeImage,
+      name: "Choclate-Cake",
+    },
+    {
+      image: cakeImage,
+      name: "Choclate-Cake",
+    },
+  ];
   return (
     <div>
       <NavBar />
       <div className="home_container">
         <div className="baner_container">
           <div></div>
-          <div style={{ paddingRight: 20, color: "whitesmoke" }}>
+          <div className="baner_text">
             <p
               style={{
                 fontFamily: "sans-serif",
@@ -57,15 +72,7 @@ export default function Home() {
         </div>
 
         <div className="menu_container">
-          <p
-            style={{
-              fontFamily: "sans-serif",
-              fontSize: "30px",
-              fontWeight: 500,
-            }}
-          >
-            What We Make
-          </p>
+          <p className="section_header">What We Make</p>
           <div
             style={{
               display: "flex",
@@ -76,17 +83,25 @@ export default function Home() {
             })}
           </div>
         </div>
-        <div>
+        <div className="menu_container ">
           <div>
-            <p>Our Bestsellers</p>
+            <p className="section_header">Our Bestsellers</p>
           </div>
           <div>
             <p>
-              These items are out topselling items customer demand for these
+              These items are our topselling items customer demand for these
               items are increasing day by day.
             </p>
           </div>
-          <div></div>
+          <div
+            style={{
+              display: "flex",
+            }}
+          >
+            {bestsellers_carousel.map((val) => {
+              return <BestSeller image={val.image} name={val.name} />;
+            })}
+          </div>
         </div>
 
         <div className="about_container">
@@ -94,38 +109,50 @@ export default function Home() {
             <p
               style={{
                 fontFamily: "sans-serif",
-                fontSize: "20px",
+                fontSize: "30px",
                 fontWeight: 500,
               }}
             >
               Our Story
             </p>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+              We started our journey in 2022. We are manufacturing & serving
+              Homemade Fresh cakes with brand name of Cake Creations. We also
+              produced Customized Cakes ,Ice cakes that will be suitable
+              according to customers requirement. We are having wide range of
+              variety of cakes that are designed by us. You can order and enjoy
+              Fresh cakes.
             </p>
           </div>
-          <div></div>
+          <div className="flex_coloumn">
+            <div className="image_container">
+              <div style={{height:"200px" , width:"200px" }}>
+                <img className="image" src={cakeImage} alt="img" />
+              </div>
+              <div style={{height:"200px" , width:"400px" }}>
+              <img className="image" src={cakeImage} alt="img" />
+              </div>
+            </div>
+            <div className="image_container">
+              <div style={{height:"200px" , width:"400px" }}>
+              <img className="image" src={cakeImage} alt="img" />
+              </div>
+              <div style={{height:"200px" , width:"200px" }}>
+              <img className="image" src={cakeImage} alt="img" />
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div className="contact_container">
-        <p
-            style={{
-              fontFamily: "sans-serif",
-              fontSize: "30px",
-              fontWeight: 500,
-            }}
-          >
-            Get In Touch
-          </p>
+        <div className="contact_container ">
+          <div className="flex_coloumn"></div>
+          <div className="flex_coloumn">
+            <p>Get In Touch</p>
+            <div>
+              {/* <ButtonMailTo label="Write me an E-Mail" mailto="mailto:no-reply@example.com" /> */}
+            </div>
+          </div>
+          <div className="flex_coloumn"></div>
         </div>
       </div>
     </div>
