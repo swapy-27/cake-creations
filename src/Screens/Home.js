@@ -5,6 +5,13 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Cake from "../components/Cake";
 import cakeImage from "../assets/best-moist-chocolate-cake-1.jpg";
 import BestSeller from "../components/BestSeller";
+import Logo from "../assets/logo192.png";
+import InstagramIcon from '@mui/icons-material/Instagram';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import EmailIcon from '@mui/icons-material/Email';
+import CallIcon from '@mui/icons-material/Call';
 export default function Home() {
   const menu_carousel = [
     {
@@ -105,7 +112,7 @@ export default function Home() {
         </div>
 
         <div className="about_container">
-          <div className="flex_coloumn">
+          <div className="flex_coloumn" style={{ justifyContent: "center" }}>
             <p
               style={{
                 fontFamily: "sans-serif",
@@ -126,33 +133,53 @@ export default function Home() {
           </div>
           <div className="flex_coloumn">
             <div className="image_container">
-              <div style={{height:"200px" , width:"200px" }}>
+              <div style={{ height: "200px", width: "200px" }}>
                 <img className="image" src={cakeImage} alt="img" />
               </div>
-              <div style={{height:"200px" , width:"400px" }}>
-              <img className="image" src={cakeImage} alt="img" />
+              <div style={{ height: "200px", width: "400px" }}>
+                <img className="image" src={cakeImage} alt="img" />
               </div>
             </div>
             <div className="image_container">
-              <div style={{height:"200px" , width:"400px" }}>
-              <img className="image" src={cakeImage} alt="img" />
+              <div style={{ height: "200px", width: "400px" }}>
+                <img className="image" src={cakeImage} alt="img" />
               </div>
-              <div style={{height:"200px" , width:"200px" }}>
-              <img className="image" src={cakeImage} alt="img" />
+              <div style={{ height: "200px", width: "200px" }}>
+                <img className="image" src={cakeImage} alt="img" />
               </div>
             </div>
           </div>
         </div>
 
-        <div className="contact_container ">
-          <div className="flex_coloumn"></div>
-          <div className="flex_coloumn">
-            <p>Get In Touch</p>
+        <div className="contact_container">
+          <div className="flex_coloumn contact_left_col">
+            <div style={{ height:"100px",width:"200px"}}>
+              <img className="logo_image" src={Logo} alt="logo"></img>
+            </div>
             <div>
-              {/* <ButtonMailTo label="Write me an E-Mail" mailto="mailto:no-reply@example.com" /> */}
+              <a href="#"><InstagramIcon/></a>
+              <a href="#"><FacebookIcon/></a>
+              <a href="#"><WhatsAppIcon/></a>
+          
             </div>
           </div>
-          <div className="flex_coloumn"></div>
+          <div className="flex_coloumn contact_middle_col">
+            <p >Get In Touch</p>
+            <div>
+            <p><LocationOnIcon/><span>
+              Dhanwantri Nagar, Jabalpur-482003</span> </p>
+            <p><EmailIcon/><span>email.gmail.com</span></p>
+            <p><CallIcon/><span>9999999999</span></p>
+            </div>
+          </div>
+          <div className="flex_coloumn contact_right_col">
+            <p>Quick Links</p>
+           
+            <p>Home</p>
+            <p>Menu</p>
+            <p>AboutUs</p>
+           
+          </div>
         </div>
       </div>
     </div>
