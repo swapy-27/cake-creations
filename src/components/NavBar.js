@@ -8,9 +8,9 @@ export default function NavBar() {
            <img className="logo_image" src={Logo} alt="logo"></img>
       </div> 
       <div className='quicklink_container'>
-        <p >Home</p>
-        <p>About us</p>
-        <p>Contact</p>
+        <a href='#'>Home</a>
+        <a href='#about'>About us</a>
+        <a href='#contact'>Contact</a>
       </div>
     </div>
   )

@@ -12,6 +12,7 @@ export default function Cake(props) {
           marginTop: "20px",
           fontWeight: 300,
           fontSize: "20px",
+          
         }}
       >
         {props.name}
